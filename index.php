@@ -10,7 +10,7 @@ Author: Katrine-Marie Burmeister
 class EventClass {
 
   function __construct(){
-    add_action('init', 'create_post_type');
+    add_action('init', array($this,'create_post_type'));
   }
 
   function create_post_type(){
@@ -28,6 +28,9 @@ class EventClass {
       )
     );
   }
+
 }
+
+$event = new EventClass();
 
 ?>
