@@ -7,7 +7,7 @@ Author: Katrine-Marie Burmeister
 */
 
 //Custom post types
-class EventClass {
+class CustomPosttype {
 
   function __construct(){
     add_action('init', array($this,'create_post_type'));
@@ -31,6 +31,6 @@ class EventClass {
 
 }
 
-$event = new EventClass();
+$event = new CustomPosttype();
 
 ?>
