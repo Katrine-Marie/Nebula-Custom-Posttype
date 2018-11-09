@@ -18,7 +18,13 @@ class CustomPosttype {
         'name' => __('Events'),
         'singular_name' => __('Event'),
         'add_new' => __('Add new'),
-        'add_new_item' => __('Add new event')
+        'add_new_item' => __('Add new event'),
+	      'edit_item' => __('Edit Event'),
+	      'new_item' => __('New Event'),
+	      'view_item' => __('View Event'),
+	      'view_items' => __('View Events'),
+	      'search_items' => __('Search Events'),
+	      'all_items' => __('All Events')
       ),
       'public' => true,
       'has_archive' => true,
