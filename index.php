@@ -4,6 +4,7 @@ Plugin Name: Nebula Custom Post Type
 Description: Plugin for creating a custom post type (EVENT)
 Version: 1.0.0
 Author: Katrine-Marie Burmeister
+Author URI: https://fjordstudio.dk
 */
 
 class CustomPosttype {
