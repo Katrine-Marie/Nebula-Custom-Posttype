@@ -8,24 +8,16 @@ Author: Katrine-Marie Burmeister
 
 //Custom post types
 class CustomPosttype {
+  private $labels;
 
-  function __construct(){
+  function __construct($labels){
+    $this->labels = $labels;
     add_action('init', array($this,'create_post_type'));
   }
 
   function create_post_type(){
-    register_post_type('event', array('labels' => array(
-        'name' => __('Events'),
-        'singular_name' => __('Event'),
-        'add_new' => __('Add new'),
-        'add_new_item' => __('Add new event'),
-	      'edit_item' => __('Edit Event'),
-	      'new_item' => __('New Event'),
-	      'view_item' => __('View Event'),
-	      'view_items' => __('View Events'),
-	      'search_items' => __('Search Events'),
-	      'all_items' => __('All Events')
-      ),
+    register_post_type('event', array(
+      'labels' => $this->labels,
       'public' => true,
       'has_archive' => true,
       'show_in_nav_menus' => true,
@@ -36,6 +28,19 @@ class CustomPosttype {
   }
 
 }
+
+$labels = array(
+	'name' => __('Events'),
+	'singular_name' => __('Event'),
+	'add_new' => __('Add New'),
+	'add_new_item' => __('Add New Event'),
+	'edit_item' => __('Edit Event'),
+	'new_item' => __('New Event'),
+	'view_item' => __('View Event'),
+	'view_items' => __('View Events'),
+	'search_items' => __('Search Events'),
+	'all_items' => __('All Events')
+);
 
 $event = new CustomPosttype();
 
