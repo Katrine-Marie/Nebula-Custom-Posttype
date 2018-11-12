@@ -6,7 +6,6 @@ Version: 1.0.0
 Author: Katrine-Marie Burmeister
 */
 
-//Custom post types
 class CustomPosttype {
   private $labels;
 
