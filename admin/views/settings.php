@@ -19,7 +19,10 @@
               <input type="text" name="nebula-name" value="" />
             </p>
       		</div>
-      	<?php submit_button(); ?>
+      	<?php 
+          wp_nonce_field( 'nebula-settings-save', 'nebula-name' );
+          submit_button();
+        ?>
       </div><!-- #universal-message-container -->
 
     </form>
