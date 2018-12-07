@@ -2,12 +2,12 @@
 /*
 Plugin Name: Nebula Custom Post Type
 Description: Plugin for creating a custom post type
-Version: 1.0.0
+Version: 2.1.0
 Author: Katrine-Marie Burmeister
 Author URI: https://fjordstudio.dk
 */
 
-require_once(__DIR__.'/includes/admin-page.php');
+require_once(__DIR__.'/admin/admin-page.php');
 
 class CustomPosttype {
   private $labels;
