@@ -12,7 +12,7 @@ function nebulaPT_register_settings() {
 add_action( 'admin_init', 'nebulaPT_register_settings' );
 
 function nebulaPT_register_options_page() {
-  add_options_page('Page Title', 'Plugin Menu', 'manage_options', 'nebulaPT', 'nebulaPT_options_page');
+  add_options_page('Nebula Custom Posttype', 'Custom Posttype', 'manage_options', 'nebulaPT', 'nebulaPT_options_page');
 }
 add_action('admin_menu', 'nebulaPT_register_options_page');
 
