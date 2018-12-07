@@ -34,19 +34,19 @@ class CustomPosttype {
 }
 
 $labels = array(
-	'name' => get_option('myplugin_option_name'),
-	'singular_name' => get_option('myplugin_option_name'),
+	'name' => get_option('nebulaPT_option_name'),
+	'singular_name' => get_option('nebulaPT_option_name'),
 	'add_new' => __('Add New'),
-	'add_new_item' => 'Add New '.get_option('myplugin_option_name'),
-	'edit_item' => 'Edit '.get_option('myplugin_option_name'),
-	'new_item' => 'New '.get_option('myplugin_option_name'),
-	'view_item' => 'View '.get_option('myplugin_option_name'),
-	'view_items' => 'View '.get_option('myplugin_option_name_plural'),
-	'search_items' => 'Search '.get_option('myplugin_option_name_plural'),
-	'all_items' => 'All '.get_option('myplugin_option_name_plural')
+	'add_new_item' => 'Add New '.get_option('nebulaPT_option_name'),
+	'edit_item' => 'Edit '.get_option('nebulaPT_option_name'),
+	'new_item' => 'New '.get_option('nebulaPT_option_name'),
+	'view_item' => 'View '.get_option('nebulaPT_option_name'),
+	'view_items' => 'View '.get_option('nebulaPT_option_name_plural'),
+	'search_items' => 'Search '.get_option('nebulaPT_option_name_plural'),
+	'all_items' => 'All '.get_option('nebulaPT_option_name_plural')
 );
 
-$icon = get_option('myplugin_option_icon');
+$icon = get_option('nebulaPT_option_icon');
 
 $posttype = new CustomPosttype($labels, $icon);
 
