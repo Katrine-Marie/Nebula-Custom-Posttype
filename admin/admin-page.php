@@ -24,31 +24,31 @@ add_action('admin_menu', 'nebulaPT_register_options_page');
 
 function nebulaPT_options_page(){
 	?>
-		 <div>
+	<div class="wrap">
 		<?php screen_icon(); ?>
-		<h1>Nebula Custom Posttype</h1>
+		<h2>Nebula Custom Posttype</h2>
 		<form method="post" action="options.php">
-		<?php settings_fields( 'nebulaPT_options_group' ); ?>
-		<h3>These Are Your Options</h3>
-		<p>Choose the settings for your custom posttype here:</p>
-		<p>
-			<label for="nebulaPT_option_name">Name (singular):</label><br />
-			<input type="text" id="nebulaPT_option_name" name="nebulaPT_option_name" value="<?php echo get_option('nebulaPT_option_name'); ?>" />
-		</p>
-		<p>
-			<label for="nebulaPT_option_name_plural">Name (plural):</label><br />
-			<input type="text" id="nebulaPT_option_name_plural" name="nebulaPT_option_name_plural" value="<?php echo get_option('nebulaPT_option_name_plural'); ?>" />
-		</p>
-		<p>
-			<label for="nebulaPT_option_icon">Menu icon:</label><br />
-			<span class="description">
-				(The name of the dashicon of your choice)
-			</span><br />
-			<input type="text" id="nebulaPT_option_icon" name="nebulaPT_option_icon" value="<?php echo get_option('nebulaPT_option_icon'); ?>" />
-		</p>
-		<?php  submit_button(); ?>
+  		<?php settings_fields( 'nebulaPT_options_group' ); ?>
+  		<h3>These Are Your Options</h3>
+  		<p>Choose the settings for your custom posttype here:</p>
+  		<p>
+  			<label for="nebulaPT_option_name">Name (singular):</label><br />
+  			<input type="text" id="nebulaPT_option_name" name="nebulaPT_option_name" value="<?php echo get_option('nebulaPT_option_name'); ?>" />
+  		</p>
+  		<p>
+  			<label for="nebulaPT_option_name_plural">Name (plural):</label><br />
+  			<input type="text" id="nebulaPT_option_name_plural" name="nebulaPT_option_name_plural" value="<?php echo get_option('nebulaPT_option_name_plural'); ?>" />
+  		</p>
+  		<p>
+  			<label for="nebulaPT_option_icon">Menu icon:</label><br />
+  			<span class="description">
+  				(The name of the dashicon of your choice)
+  			</span><br />
+  			<input type="text" id="nebulaPT_option_icon" name="nebulaPT_option_icon" value="<?php echo get_option('nebulaPT_option_icon'); ?>" />
+  		</p>
+  		<?php  submit_button(); ?>
 		</form>
-		</div>
+	</div>
 
 	<?php
 }
