@@ -5,9 +5,15 @@ function nebulaPT_register_settings() {
    add_option( 'nebulaPT_option_name_plural', 'Custom Posttypes');
    add_option( 'nebulaPT_option_icon', 'dashicons-admin-post');
 
-   register_setting( 'nebulaPT_options_group', 'nebulaPT_option_name', 'nebulaPT_callback' );
-	 register_setting( 'nebulaPT_options_group', 'nebulaPT_option_name_plural', 'nebulaPT_callback' );
-	 register_setting( 'nebulaPT_options_group', 'nebulaPT_option_icon', 'nebulaPT_callback' );
+   $settingsArray = array (
+  	'nebulaPT_option_name',
+    'nebulaPT_option_name_plural',
+    'nebulaPT_option_icon'
+  );
+
+  foreach ($settingsArray as $setting) {
+  	register_setting( 'nebulaPT_options_group', $setting, 'nebulaPT_callback');
+  }
 }
 add_action( 'admin_init', 'nebulaPT_register_settings' );
 
