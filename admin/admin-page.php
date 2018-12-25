@@ -18,13 +18,23 @@ function nebulaPT_register_settings() {
 add_action( 'admin_init', 'nebulaPT_register_settings' );
 
 function nebulaPT_register_options_page() {
-  add_options_page('Nebula Custom Posttype', 'Custom Posttype', 'manage_options', 'nebulaPT', 'nebulaPT_options_page');
+  global $page_hook_suffix;
+  $page_hook_suffix = add_options_page('Nebula Custom Posttype', 'Custom Posttype', 'manage_options', 'nebulaPT', 'nebulaPT_options_page');
 }
 add_action('admin_menu', 'nebulaPT_register_options_page');
 
+function nebulaPT_enqueue_admin_style($hook) {
+    global $page_hook_suffix;
+    if( $hook != $page_hook_suffix )
+        return;
+    wp_register_style('options_page_style', plugins_url('admin-style.css',__FILE__));
+    wp_enqueue_style('options_page_style');
+}
+add_action( 'admin_enqueue_scripts', 'nebulaPT_enqueue_admin_style' );
+
 function nebulaPT_options_page(){
 	?>
-	<div class="wrap">
+	<div class="wrap nebulaCustomPosttype">
 		<?php screen_icon(); ?>
 		<h2>Nebula Custom Posttype</h2>
 		<form method="post" action="options.php">
