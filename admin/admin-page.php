@@ -52,9 +52,10 @@ function nebulaPT_options_page(){
   		<p>
   			<label for="nebulaPT_option_icon">Menu icon:</label><br />
   			<span class="description">
-  				(The name of the dashicon of your choice)
+  				(Choose which icon should represent your custom posttype)
   			</span><br />
-  			<input type="text" id="nebulaPT_option_icon" name="nebulaPT_option_icon" value="<?php echo get_option('nebulaPT_option_icon'); ?>" />
+
+  			<!-- <input type="text" id="nebulaPT_option_icon" name="nebulaPT_option_icon" value="<?php echo get_option('nebulaPT_option_icon'); ?>" /> -->
   		</p>
   		<?php  submit_button(); ?>
 		</form>
