@@ -55,6 +55,11 @@ function nebulaPT_options_page(){
   				(Choose which icon should represent your custom posttype)
   			</span><br />
 
+        <label for="nebulaPT_option_icon1"><span class="dashicons dashicons-admin-post"></span></label>
+				<input type="radio" id="nebulaPT_option_icon1" name="nebulaPT_option_icon" value="dashicons-admin-post" <?php checked( 'dashicons-admin-post', get_option( 'nebulaPT_option_icon' ) ); ?>><br />
+
+				<label for="nebulaPT_option_icon2"><span class="dashicons dashicons-calendar-alt"></span></label>
+				<input type="radio" id="nebulaPT_option_icon2" name="nebulaPT_option_icon" value="dashicons-calendar-alt" <?php checked( 'dashicons-calendar-alt', get_option( 'nebulaPT_option_icon' ) ); ?>><br />
   			<!-- <input type="text" id="nebulaPT_option_icon" name="nebulaPT_option_icon" value="<?php echo get_option('nebulaPT_option_icon'); ?>" /> -->
   		</p>
   		<?php  submit_button(); ?>
