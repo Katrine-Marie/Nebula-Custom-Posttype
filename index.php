@@ -13,6 +13,10 @@
 *
 **/
 
+if(!defined('ABSPATH')){
+	exit('Go away!');
+}
+
 require_once(__DIR__.'/admin/admin-page.php');
 
 class CustomPosttype {
