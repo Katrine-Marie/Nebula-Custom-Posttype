@@ -13,6 +13,8 @@
 *
 **/
 
+namespace nebula\pt;
+
 if(!defined('ABSPATH')){
 	exit('Go away!');
 }
