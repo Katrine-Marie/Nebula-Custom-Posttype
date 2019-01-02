@@ -1,11 +1,17 @@
 <?php
-/*
-Plugin Name: Nebula Custom Post Type
-Description: Plugin for creating a custom post type
-Version: 2.1.0
-Author: Katrine-Marie Burmeister
-Author URI: https://fjordstudio.dk
-*/
+/**
+*
+* Plugin Name: Nebula Custom Post Type
+* Plugin URI: https://github.com/Katrine-Marie/Nebula-Custom-Posttype
+* Description: Plugin for creating a custom post type
+* Version: 2.2.0
+* Author: Katrine-Marie Burmeister
+* Author URI: https://fjordstudio.dk
+* Text Domain: nebula-pt
+* License:     GPL-2.0+
+* License URI: http://www.gnu.org/licenses/gpl-2.0.txt
+*
+**/
 
 require_once(__DIR__.'/admin/admin-page.php');
 
