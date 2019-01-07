@@ -1,5 +1,7 @@
 <?php
 
+namespace nebula\pt;
+
 function nebulaPT_register_settings() {
    add_option( 'nebulaPT_option_name', 'Custom Posttype');
    add_option( 'nebulaPT_option_name_plural', 'Custom Posttypes');
@@ -15,13 +17,13 @@ function nebulaPT_register_settings() {
   	register_setting( 'nebulaPT_options_group', $setting, 'nebulaPT_callback');
   }
 }
-add_action( 'admin_init', 'nebulaPT_register_settings' );
+add_action( 'admin_init', __NAMESPACE__.'\nebulaPT_register_settings' );
 
 function nebulaPT_register_options_page() {
   global $page_hook_suffix;
-  $page_hook_suffix = add_options_page('Nebula Custom Posttype', 'Custom Posttype', 'manage_options', 'nebulaPT', 'nebulaPT_options_page');
+  $page_hook_suffix = add_options_page('Nebula Custom Posttype', 'Custom Posttype', 'manage_options', 'nebulaPT', __NAMESPACE__.'\nebulaPT_options_page');
 }
-add_action('admin_menu', 'nebulaPT_register_options_page');
+add_action('admin_menu', __NAMESPACE__.'\nebulaPT_register_options_page');
 
 function nebulaPT_enqueue_admin_style($hook) {
     global $page_hook_suffix;
@@ -30,7 +32,7 @@ function nebulaPT_enqueue_admin_style($hook) {
     wp_register_style('options_page_style', plugins_url('admin-style.css',__FILE__));
     wp_enqueue_style('options_page_style');
 }
-add_action( 'admin_enqueue_scripts', 'nebulaPT_enqueue_admin_style' );
+add_action( 'admin_enqueue_scripts', __NAMESPACE__.'\nebulaPT_enqueue_admin_style' );
 
 function nebulaPT_options_page(){
 	?>
