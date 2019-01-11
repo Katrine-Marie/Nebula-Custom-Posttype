@@ -4,7 +4,7 @@
 * Plugin Name: Nebula Custom Post Type
 * Plugin URI: https://github.com/Katrine-Marie/Nebula-Custom-Posttype
 * Description: Plugin for creating a custom post type
-* Version: 2.4.0
+* Version: 3.0.0
 * Author: Katrine-Marie Burmeister
 * Author URI: https://fjordstudio.dk
 * Text Domain: nebula-pt
